@@ -29,20 +29,48 @@ p {
   border: 1px solid black;
 
   .landing {
-    .ribbon-icon {
-      height: 300px;
-      svg {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .top {
+      .ribbon-icon {
+        height: 300px;
+        svg {
+          color: $main-color;
+          font-size: 15em;
+          transform: rotate(-20deg);
+        }
+      }
+
+      h1 {
         color: $main-color;
-        font-size: 15em;
-        transform: rotate(-20deg);
+        width: 226px;
+        margin-left: auto;
+        font-size: 55px;
       }
     }
 
-    h1 {
-      color: $main-color;
-      width: 226px;
-      margin-left: auto;
-      font-size: 55px;
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      margin-top: 80px;
+      .btn,
+      .btn-flat,
+      a {
+        width: 200px;
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+
+        &.login {
+          border-radius: 50px;
+          background-color: $main-color;
+        }
+
+        &.signup {
+          color: $main-color;
+        }
+      }
     }
   }
 }
