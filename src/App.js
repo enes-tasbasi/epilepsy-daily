@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRibbon } from '@fortawesome/free-solid-svg-icons'
-import { Button } from 'react-materialize';
+import { Button, TextInput } from 'react-materialize';
 
 import './App.scss';
 
@@ -12,20 +12,21 @@ function Landing() {
     <div className="landing">
       <div className="top">
 
-
         <span className="ribbon-icon">
           <FontAwesomeIcon icon={faRibbon} />
         </span>
         <h1>Epilepsy Daily</h1>
       </div>
       <div className="buttons">
-        <Button
-          node="button"
-          className="login"
-          waves="light"
-        >
-          LOGIN
+        <Link to="/login">
+          <Button
+            node="button"
+            className="login"
+            waves="light"
+          >
+            LOGIN
         </Button>
+        </Link>
         <Link to="/signup">
           <Button
             flat
@@ -43,7 +44,7 @@ function Landing() {
 
 function Signup() {
   return (
-    <div className="landing">
+    <div className="signup">
       <div className="top">
 
 
@@ -52,23 +53,45 @@ function Signup() {
         </span>
         <h1>Epilepsy Daily</h1>
       </div>
-      <div className="buttons">
-        <Button
-          node="button"
-          className="login"
-          waves="light"
-        >
-          LOGIN
-        </Button>
-        <Button
-          flat
-          node="button"
-          className="signup"
-          waves="light"
-        >
-          SIGNUP
-        </Button>
+      <div className="textfields">
+        <h1>SIGNUP</h1>
+        <TextInput label="Username" />
+        <TextInput label="Email" />
+        <TextInput label="Password" />
+        <TextInput label="Password Confirm" />
       </div>
+      <Button
+        node="button"
+        className="login"
+        waves="light"
+      >
+        Submit
+        </Button>
+    </div>
+  );
+}
+
+function Login() {
+  return (
+    <div className="signup">
+      <div className="top">
+        <span className="ribbon-icon">
+          <FontAwesomeIcon icon={faRibbon} />
+        </span>
+        <h1>Epilepsy Daily</h1>
+      </div>
+      <div className="textfields">
+        <h1>LOGIN</h1>
+        <TextInput label="Username" />
+        <TextInput label="Password" />
+      </div>
+      <Button
+        node="button"
+        className="login"
+        waves="light"
+      >
+        Submit
+        </Button>
     </div>
   );
 }
@@ -80,6 +103,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
         </Switch>
       </Router>
     </div>

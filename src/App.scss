@@ -26,8 +26,8 @@ p {
   height: 731px;
   width: 411px;
   margin: auto;
-  border: 1px solid black;
-
+  margin-top: 50px;
+  border: 1px solid purple;
   .landing {
     height: 100%;
     display: flex;
@@ -44,6 +44,7 @@ p {
 
       h1 {
         color: $main-color;
+        font-weight: bold;
         width: 226px;
         margin-left: auto;
         font-size: 55px;
@@ -71,6 +72,48 @@ p {
           color: $main-color;
         }
       }
+    }
+  }
+
+  .signup {
+    h1 {
+      color: $main-color;
+    }
+    .top {
+      height: 200px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      .ribbon-icon {
+        height: 100px;
+        svg {
+          color: $main-color;
+          font-size: 10em;
+          transform: rotate(-20deg);
+        }
+      }
+
+      h1 {
+        width: 226px;
+        font-size: 55px;
+      }
+    }
+
+    .textfields {
+      margin: auto;
+      width: 328px;
+      h1 {
+        margin: auto;
+      }
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      margin: auto;
+      margin-top: 20px;
+      border-radius: 50px;
+      background-color: $main-color;
+      margin-left: 100px;
     }
   }
 }
