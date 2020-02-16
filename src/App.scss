@@ -1,0 +1,48 @@
+$main-color: #8e2992;
+$secondary-color: #91c9ff;
+$tertiary-color: #84e89a;
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+span,
+input,
+div,
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.App {
+  height: 731px;
+  width: 411px;
+  margin: auto;
+  border: 1px solid black;
+
+  .landing {
+    .ribbon-icon {
+      height: 300px;
+      svg {
+        color: $main-color;
+        font-size: 15em;
+        transform: rotate(-20deg);
+      }
+    }
+
+    h1 {
+      color: $main-color;
+      width: 226px;
+      margin-left: auto;
+      font-size: 55px;
+    }
+  }
+}
